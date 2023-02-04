@@ -1,20 +1,17 @@
+const { createCanvas, loadImage } = import('canvas');
 
-const { Canvas } = import('canvas-constructor')
-const canvas = import('canvas')
+async function createImage() {
+  const canvas = createCanvas(200, 200);
+  const ctx = canvas.getContext('2d');
 
-app.get('/:feed', async (req, res) => {
+  // Load image
+  const image = await loadImage('path/to/image.jpg');
 
-    const img = await canvas.loadImage('https://teckspace.files.wordpress.com/2011/08/twitter1.jpg')
+  // Draw image onto canvas
+  ctx.drawImage(image, 0, 0, 200, 200);
 
-    let image = new Canvas(550, 267)
-    .printImage(img, 0, 0, 550, 267)
-    .setTextFont('28px Impact')
-    .printText(req.params.feed, 40, 150)
-    .toBuffer();
+  // Save the image as a png
+  canvas.createPNGStream().pipe(fs.createWriteStream('output.png'));
+}
 
-    res.set({'Content-Type': 'image/png'})//setting content type as png image!
-    res.send(image)//sending the image!
-
-})
-
-app.listen(8080)//deploying the app in localhost with port 8080
+createImage();
