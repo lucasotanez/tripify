@@ -1,5 +1,4 @@
-import express from "express"
-const app = express()
+
 const { Canvas } = import('canvas-constructor')
 const canvas = import('canvas')
 

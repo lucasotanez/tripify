@@ -1,6 +1,7 @@
 body {
-  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -37,4 +38,30 @@ p {
   p {
     max-width: none;
   }
+}
+
+.buttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonbox button {
+  margin: 1vw; 
+  display: inline-block;
+  padding: 0.5vw 2vw;
+  border-radius: 2rem;
+  font-size: 1.2vw;
+  background-color: transparent;
+  border: #296bbb solid 0.3vw;
+  color: #296bbb;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.buttonbox button:hover {
+  transition: 0.25s;
+  padding: 0.5vw 2.5vw;
+  border: #4ac424 solid 0.3vw;
+  color: #4ac424;
 }
