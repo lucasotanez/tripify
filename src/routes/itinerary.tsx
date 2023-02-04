@@ -1,9 +1,10 @@
 import { Title } from "solid-start";
 
-export default function Result() {
+export default function Itinerary() {
     return (
         <main>
-            <Title></Title>
+            <Title>Your Flight Itinerary</Title>
+            <h1>Have a nice flight!</h1>
         </main>
     )
 }
