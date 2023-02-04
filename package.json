@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "draw": "node src/components/image.js"
   },
   "type": "module",
   "devDependencies": {
@@ -17,6 +18,8 @@
   "dependencies": {
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.7.0",
+    "canvas": "^2.11.0",
+    "express": "^4.18.2",
     "solid-js": "^1.6.9",
     "solid-start": "^0.2.19",
     "undici": "^5.15.1"
