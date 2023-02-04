@@ -49,7 +49,19 @@ p {
 .buttonbox button {
   margin: 1vw; 
   display: inline-block;
-  padding: 0.5vw 1vw;
-  border-radius: 1.2rem;
+  padding: 0.5vw 2vw;
+  border-radius: 2rem;
   font-size: 1.2vw;
+  background-color: transparent;
+  border: #296bbb solid 0.3vw;
+  color: #296bbb;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.buttonbox button:hover {
+  transition: 0.25s;
+  padding: 0.5vw 2.5vw;
+  border: #4ac424 solid 0.3vw;
+  color: #4ac424;
 }

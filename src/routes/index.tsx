@@ -2,7 +2,6 @@ import { Title } from "solid-start";
 import Login from "../components/Login"
 
 
-
 export default function Home() {
 
   return (
@@ -13,10 +12,6 @@ export default function Home() {
       <form>
         <input type="text" placeholder="Enter "/>
       </form>
-      <div class="buttonbox">
-        <button>Plan your trip</button>
-        {/* <button>test2</button> */}
-      </div>
       <Login />
     </main>
   );
