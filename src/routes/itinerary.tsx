@@ -2,7 +2,8 @@ import { Title } from "solid-start";
 import { useSearchParams, useServerContext, parseCookie } from "solid-start";
 import { redirect } from "solid-start/server";
 import { isServer } from "solid-js/web"
-import { Buffer } from "node:buffer"
+import { Buffer } from "buffer"
+globalThis.Buffer = Buffer
 //import * as dotenv from 'dotenv'
 
 export default async function Itinerary() {
@@ -33,16 +34,17 @@ export default async function Itinerary() {
         const info = await fetch('https://accounts.spotify.com/api/token', {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
             },
-            body: JSON.stringify({
+            body: new URLSearchParams({
                 code: code,
                 redirect_uri: redirect_uri,
-                grant_type: 'authorization_code'
+                grant_type: 'client_credentials'
             })
-        })
-        console.log(info)
+        }).then(res => res.json())
+        console.log("info " + JSON.stringify(info))
+        //console.log(info)
         
 
     }
