@@ -80,7 +80,7 @@ export default function ImageLoader(props: Props) {
 
     //const buffer = canvas.toBuffer("image/png");
     const buffer1: string = canvas.toDataURL('image/png')
-    console.log(buffer1)
+    //console.log(buffer1)
     setBuffer(buffer1)
     //fs.writeFileSync("./src/components/image.png", buffer);
     })
