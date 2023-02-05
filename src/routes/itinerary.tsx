@@ -19,6 +19,7 @@ export default function Itinerary() {
             <For each={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')}>{(item, i) => 
                 <p>{item}</p>
             }</For>
+            <img src="src/components/image.png"></img>
         </main>
     )
 }
