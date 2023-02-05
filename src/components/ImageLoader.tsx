@@ -1,10 +1,11 @@
-import { createCanvas } from 'canvas'
+import {  Image, createCanvas, loadImage } from 'canvas'
+
 
 type Props = {
     artists: string[]
 }
 
-export default function Image(props: Props) {
+export default function ImageLoader(props: Props) {
 
 const width = 600;
 const height = 750;
@@ -19,6 +20,11 @@ let post = {
 
 const canvas = createCanvas(post.width, post.height);
 const context = canvas.getContext("2d");
+
+const img = new Image();
+img.onload = () => context.drawImage(img, 0, 0, 500, 600);
+img.onerror = err => { throw err };
+img.src = 'https://pixlok.com/wp-content/uploads/2021/12/Airplane-Icon-SVG-04mfdf.png';
 
 context.fillStyle = "#0f83d6";
 context.fillRect(0, 0, width, height);
@@ -36,8 +42,8 @@ context.fillStyle = "#fff";
 context.fillText("1. " + post.artists[0], 60, 250);
 context.fillText("2. " + post.artists[1], 60, 350);
 context.fillText("3. " + post.artists[2], 60, 450);
-context.fillText("4. " + post.artists[3], 60, 550);
-context.fillText("5. " + post.artists[4], 60, 650);
+// context.fillText("4. " + post.artists[3], 60, 550);
+// context.fillText("5. " + post.artists[4], 60, 650);
 
 //const buffer = canvas.toBuffer("image/png");
 const buffer: string = canvas.toDataURL('image/png')
