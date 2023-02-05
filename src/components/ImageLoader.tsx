@@ -47,9 +47,8 @@ export default function ImageLoader(props: Props) {
     context.fillText("5. " + post.artists[4], 60, 650);
 
     let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png", {crossOrigin: "anonymous"});
-
     //image.crossOrigin = 'anonymous'
-    image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
+    //image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
     context.drawImage(image, 200, 200, 100, 100);
 
     //const buffer = canvas.toBuffer("image/png");
