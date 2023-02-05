@@ -15,11 +15,11 @@ onMount(async () => {
     const height = 750;
 
     let post = {
-    tripName: "Music Trip",
-    // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
-    artists: props.artists,
-    width: 600,
-    height: 750,
+        tripName: "Music Trip",
+        // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
+        artists: props.artists,
+        width: 600,
+        height: 750,
     };
 
     const canvas = createCanvas(post.width, post.height);
