@@ -30,7 +30,7 @@ export default function ImageLoader(props: Props) {
         artists: props.artists,
         width: 600,
         height: 750,
-        pallete: ["#B9D6F2", "#061A40", "#0353A4", "#006DAA"],
+        pallete: [["#B9D6F2", "#061A40", "#0353A4", "#006DAA"], ]
     };
 
     //const query = 'Pink Floyd'
