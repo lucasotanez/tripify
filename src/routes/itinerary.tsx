@@ -1,5 +1,5 @@
 import { Title } from "solid-start";
-import { createSignal, createEffect } from "solid-js";
+import { createSignal, createEffect, For } from "solid-js";
 import { useSearchParams } from "solid-start";
 import { onMount } from "solid-js";
 import { redirect } from "solid-start/server";
@@ -16,9 +16,9 @@ export default function Itinerary() {
     return (
         <main>
             <h1>Have a nice flight!</h1>
-            <p>HIllo</p>
-            <p>{JSON.stringify(searchParams)}</p>
-            <p>{JSON.parse(JSON.parse(JSON.stringify({...searchParams}.info)))}</p>
+            <For each={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')}>{(item, i) => 
+                <p>{item}</p>
+            }</For>
         </main>
     )
 }
