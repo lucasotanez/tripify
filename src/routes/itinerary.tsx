@@ -20,7 +20,7 @@ export default function Itinerary() {
     return (
         <main>
             <h1>Have a nice flight!</h1>
-            <a href="/">BACK</a>
+            {/* <a href="/">BACK</a> */}
             {/* <For each={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')}>{(item, i) => 
                 <p>{item}</p>
             }</For> */}
