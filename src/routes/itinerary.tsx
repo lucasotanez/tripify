@@ -22,7 +22,7 @@ export default function Itinerary() {
                 <p>{item}</p>
             }</For>
             <img src="src/components/image.png"></img>
-            */}
+            
             <Image artists={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')} />
         </main>
     )
