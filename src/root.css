@@ -31,7 +31,7 @@ h1 {
   font-weight: 100;
   line-height: 1.1;
   margin: 1rem;
-  width: 300px;
+  width: 100%;
   text-align: center;
   max-width: none;
 }
