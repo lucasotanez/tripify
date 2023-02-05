@@ -1,30 +1,27 @@
-//const { createCanvas } = require("canvas");
 import { createCanvas } from 'canvas'
-//const fs = require("fs");
-//import * as fs from 'fs'
 
-export default function Image() {
+type Props = {
+    artists: string[]
+}
 
+export default function Image(props: Props) {
 
 const width = 600;
 const height = 750;
 
-
 let post = {
    tripName: "Music Trip",
-   artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
+   // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
+   artists: props.artists,
    width: 600,
    height: 750,
 };
 
-
 const canvas = createCanvas(post.width, post.height);
 const context = canvas.getContext("2d");
 
-
 context.fillStyle = "#0f83d6";
 context.fillRect(0, 0, width, height);
-
 
 // Set the style of the test and render it to the canvas
 context.font = "bold 40pt 'PT Sans'";

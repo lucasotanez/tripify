@@ -3,6 +3,7 @@ import { createSignal, createEffect, For } from "solid-js";
 import { useSearchParams } from "solid-start";
 import { onMount } from "solid-js";
 import { redirect } from "solid-start/server";
+import Image from "~/components/Image";
 //import * as dotenv from 'dotenv'
 
 export default function Itinerary() {
@@ -16,10 +17,13 @@ export default function Itinerary() {
     return (
         <main>
             <h1>Have a nice flight!</h1>
+            
             <For each={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')}>{(item, i) => 
                 <p>{item}</p>
             }</For>
             <img src="src/components/image.png"></img>
+            */}
+            <Image artists={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')} />
         </main>
     )
 }
