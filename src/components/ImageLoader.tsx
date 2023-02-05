@@ -48,11 +48,11 @@ export default function ImageLoader(props: Props) {
         let res = await artist.json()
         //console.log(res.artists[0]['begin-area'].name)
         artistLocations.push(res.artists[0]['begin-area'].name)
-        let tags = res.artists[0].tags
-        tags.sort((a: any, b: any) => {
-            return b.count - a.count
-        })
-        artistGenres.push(tags)
+        let tags = res.artists[0].tags || [];
+        // tags.sort((a: any, b: any) => {
+        //     return b.count - a.count
+        // })
+        // artistGenres.push(tags)
     }
     console.log(artistLocations)
     console.log(artistGenres)
@@ -91,6 +91,14 @@ export default function ImageLoader(props: Props) {
     context.fillText("3   " + post.artists[2], 70, 430);
     context.fillText("4   " + post.artists[3], 70, 505);
     context.fillText("5   " + post.artists[4], 70, 580);
+
+    context.font = "italic 12pt 'Ubuntu'";
+    context.textAlign = "right";
+    context.fillText(artistLocations[0], 515, 278);
+    context.fillText(artistLocations[1], 515, 353);
+    context.fillText(artistLocations[2], 515, 428);
+    context.fillText(artistLocations[3], 515, 503);
+    context.fillText(artistLocations[4], 515, 578);
 
     let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png", {crossOrigin: "anonymous"});
     context.drawImage(image, 450, 150, 75, 75);
