@@ -21,7 +21,6 @@
     "canvas": "^2.11.0",
     "dotenv": "^16.0.3",
     "express-http-proxy": "^1.6.3",
-    "musicbrainz-api": "^0.10.2",
     "solid-js": "^1.6.9",
     "solid-start": "^0.2.19",
     "undici": "^5.15.1"

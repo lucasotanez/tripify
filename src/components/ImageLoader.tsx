@@ -4,20 +4,10 @@ import { onMount, createSignal } from 'solid-js';
 type Props = {
     artists: string[]
 }
-// const mbApi = new MusicBrainzApi({
-//     appName: 'tripify',
-//     appVersion: '0.1.0',
-//     appContactInfo: 'ribru17@gmail.com'
-// });
 
 export default function ImageLoader(props: Props) {
 
     const [buffer, setBuffer] = createSignal('')
-    //const mbApi = new MusicBrainzApi({
-    //    appName: 'tripify',
-    //    appVersion: '0.1.0',
-    //    appContactInfo: 'ribru17@gmail.com'
-    //})
 
     onMount(async () => {
 
@@ -26,7 +16,6 @@ export default function ImageLoader(props: Props) {
     console.log("WORKING")
     let post = {
         tripName: "Your Concert Tour:",
-        // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
         artists: props.artists,
         width: 600,
         height: 750,
@@ -34,12 +23,12 @@ export default function ImageLoader(props: Props) {
         ["#CCC9DC", "#1B2A41", "#324A5F"], ["#EAF4F4", "#6B9080", "#A4C3B2"],
         ["#f2b43f", "#363537", "#d62c20"]],
     };
+    // retrieve information about artists
 
     //const query = 'Pink Floyd'
     //console.log(tags)
 
     let colorway = Math.floor(Math.random() * 5);
-
     let artistLocations: string[] = []
     let artistGenres: {count: number, name: string}[] = []
     for (let i = 0; i < 5; i++) {
@@ -50,13 +39,8 @@ export default function ImageLoader(props: Props) {
             }
         })
         let res = await artist.json()
-        //console.log(res.artists[0]['begin-area'].name)
         artistLocations.push(res.artists[0]['begin-area']?.name || 'Unknown')
         let tags = res.artists[0].tags || [];
-        // tags.sort((a: any, b: any) => {
-        //     return b.count - a.count
-        // })
-        // artistGenres.push(tags)
     }
     console.log(artistLocations)
     console.log(artistGenres)
@@ -140,9 +124,7 @@ export default function ImageLoader(props: Props) {
 
     //const buffer = canvas.toBuffer("image/png");
     const buffer1: string = canvas.toDataURL('image/png')
-    //console.log(buffer1)
     setBuffer(buffer1)
-    //fs.writeFileSync("./src/components/image.png", buffer);
     })
 
 
