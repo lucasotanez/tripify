@@ -1,5 +1,9 @@
-const { createCanvas } = require("canvas");
-const fs = require("fs");
+//const { createCanvas } = require("canvas");
+import { createCanvas } from 'canvas'
+//const fs = require("fs");
+//import * as fs from 'fs'
+
+export default function Image() {
 
 
 const width = 600;
@@ -38,6 +42,13 @@ context.fillText("3. " + post.artists[2], 60, 450);
 context.fillText("4. " + post.artists[3], 60, 550);
 context.fillText("5. " + post.artists[4], 60, 650);
 
+//const buffer = canvas.toBuffer("image/png");
+const buffer: string = canvas.toDataURL('image/png')
+//fs.writeFileSync("./src/components/image.png", buffer);
 
-const buffer = canvas.toBuffer("image/png");
-fs.writeFileSync("./src/components/image.png", buffer);
+    return (
+        <div>
+            <img src={`${buffer}`} />
+        </div>
+    )
+}
