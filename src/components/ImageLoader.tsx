@@ -4,20 +4,10 @@ import { onMount, createSignal } from 'solid-js';
 type Props = {
     artists: string[]
 }
-// const mbApi = new MusicBrainzApi({
-//     appName: 'tripify',
-//     appVersion: '0.1.0',
-//     appContactInfo: 'ribru17@gmail.com'
-// });
 
 export default function ImageLoader(props: Props) {
 
     const [buffer, setBuffer] = createSignal('')
-    //const mbApi = new MusicBrainzApi({
-    //    appName: 'tripify',
-    //    appVersion: '0.1.0',
-    //    appContactInfo: 'ribru17@gmail.com'
-    //})
 
     onMount(async () => {
 
@@ -26,16 +16,12 @@ export default function ImageLoader(props: Props) {
     console.log("WORKING")
     let post = {
         tripName: "Your Concert Tour:",
-        // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
         artists: props.artists,
         width: 600,
         height: 750,
         pallete: ["#B9D6F2", "#061A40", "#0353A4", "#006DAA"],
     };
-
-    //const query = 'Pink Floyd'
-    //console.log(tags)
-
+    // retrieve information about artists
     let artistLocations: string[] = []
     let artistGenres: {count: number, name: string}[] = []
     for (let i = 0; i < 5; i++) {
@@ -46,13 +32,8 @@ export default function ImageLoader(props: Props) {
             }
         })
         let res = await artist.json()
-        //console.log(res.artists[0]['begin-area'].name)
         artistLocations.push(res.artists[0]['begin-area']?.name || 'Unknown')
         let tags = res.artists[0].tags || [];
-        // tags.sort((a: any, b: any) => {
-        //     return b.count - a.count
-        // })
-        // artistGenres.push(tags)
     }
     console.log(artistLocations)
     console.log(artistGenres)
@@ -128,12 +109,9 @@ export default function ImageLoader(props: Props) {
     context.roundRect(510, 0, 90, 90, [0, 0, 0, 55])
     context.stroke()
 
-
-    //const buffer = canvas.toBuffer("image/png");
+    // get canvas image as base64 string
     const buffer1: string = canvas.toDataURL('image/png')
-    //console.log(buffer1)
     setBuffer(buffer1)
-    //fs.writeFileSync("./src/components/image.png", buffer);
     })
 
 
