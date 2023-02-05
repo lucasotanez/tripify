@@ -1,7 +1,5 @@
 import { createCanvas, loadImage } from 'canvas'
 import { onMount, createSignal } from 'solid-js';
-import { MusicBrainzApi } from 'musicbrainz-api';
-// import Google from './google.png'
 
 type Props = {
     artists: string[]
@@ -15,10 +13,14 @@ type Props = {
 export default function ImageLoader(props: Props) {
 
     const [buffer, setBuffer] = createSignal('')
-
-    
+    //const mbApi = new MusicBrainzApi({
+    //    appName: 'tripify',
+    //    appVersion: '0.1.0',
+    //    appContactInfo: 'ribru17@gmail.com'
+    //})
 
     onMount(async () => {
+
     const width = 600;
     const height = 750;
     console.log("WORKING")
@@ -30,6 +32,30 @@ export default function ImageLoader(props: Props) {
         height: 750,
         pallete: ["#B9D6F2", "#061A40", "#0353A4", "#006DAA"],
     };
+
+    //const query = 'Pink Floyd'
+    //console.log(tags)
+
+    let artistLocations: string[] = []
+    let artistGenres: {count: number, name: string}[] = []
+    for (let i = 0; i < 5; i++) {
+        let query = post.artists[i]
+        let artist = await fetch(`https://musicbrainz.org/ws/2/artist/?query=${query}`, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        let res = await artist.json()
+        //console.log(res.artists[0]['begin-area'].name)
+        artistLocations.push(res.artists[0]['begin-area'].name)
+        let tags = res.artists[0].tags
+        tags.sort((a: any, b: any) => {
+            return b.count - a.count
+        })
+        artistGenres.push(tags)
+    }
+    console.log(artistLocations)
+    console.log(artistGenres)
 
     const canvas = createCanvas(post.width, post.height);
     const context = canvas.getContext("2d");
@@ -97,7 +123,7 @@ export default function ImageLoader(props: Props) {
 
     //const buffer = canvas.toBuffer("image/png");
     const buffer1: string = canvas.toDataURL('image/png')
-    console.log(buffer1)
+    //console.log(buffer1)
     setBuffer(buffer1)
     //fs.writeFileSync("./src/components/image.png", buffer);
     })
