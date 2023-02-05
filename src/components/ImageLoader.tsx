@@ -47,7 +47,7 @@ export default function ImageLoader(props: Props) {
         })
         let res = await artist.json()
         //console.log(res.artists[0]['begin-area'].name)
-        artistLocations.push(res.artists[0]['begin-area'].name)
+        artistLocations.push(res.artists[0]['begin-area']?.name || 'Unknown')
         let tags = res.artists[0].tags || [];
         // tags.sort((a: any, b: any) => {
         //     return b.count - a.count
