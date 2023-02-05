@@ -1,10 +1,16 @@
 import { createCanvas, loadImage } from 'canvas'
 import { onMount, createSignal } from 'solid-js';
+import { MusicBrainzApi } from 'musicbrainz-api';
 // import Google from './google.png'
 
 type Props = {
     artists: string[]
 }
+// const mbApi = new MusicBrainzApi({
+//     appName: 'tripify',
+//     appVersion: '0.1.0',
+//     appContactInfo: 'ribru17@gmail.com'
+// });
 
 export default function ImageLoader(props: Props) {
 
@@ -17,39 +23,77 @@ export default function ImageLoader(props: Props) {
     const height = 750;
     console.log("WORKING")
     let post = {
-        tripName: "Music Trip",
+        tripName: "Your Concert Tour:",
         // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
         artists: props.artists,
         width: 600,
         height: 750,
+        pallete: ["#B9D6F2", "#061A40", "#0353A4", "#006DAA"],
     };
 
     const canvas = createCanvas(post.width, post.height);
     const context = canvas.getContext("2d");
 
-    context.fillStyle = "#0f83d6";
+    context.fillStyle = post.pallete[2];
     context.fillRect(0, 0, width, height);
 
     // Set the style of the test and render it to the canvas
-    context.font = "bold 40pt 'Ubuntu'";
+    context.font = "bold 30pt 'Ubuntu'";
     context.textAlign = "center";
     // 600 is the x value (the center of the image)
     // 170 is the y (the top of the line of text)
-    context.fillStyle = "#000";
-    context.fillText(post.tripName, 300, 125);
+    context.fillStyle = post.pallete[0];
+    context.fillText(post.tripName, 225, 105);
     context.textAlign = "left";
-    context.font = "bold 20pt 'Ubuntu'";
-    context.fillStyle = "#fff";
-    context.fillText("1. " + post.artists[0], 60, 300);
-    context.fillText("2. " + post.artists[1], 60, 375);
-    context.fillText("3. " + post.artists[2], 60, 450);
-    context.fillText("4. " + post.artists[3], 60, 525);
-    context.fillText("5. " + post.artists[4], 60, 600);
+    context.font = "bold 18pt 'Ubuntu'";
+
+    context.beginPath();
+    context.fillStyle = post.pallete[1];
+    context.roundRect(50, 245, 500, 50, 35)
+    context.roundRect(50, 320, 500, 50, 35)
+    context.roundRect(50, 395, 500, 50, 35)
+    context.roundRect(50, 470, 500, 50, 35)
+    context.roundRect(50, 545, 500, 50, 35)
+    context.fillStyle = post.pallete[1];
+    context.stroke();
+    context.fill();
+
+    context.beginPath();
+    context.fillStyle = post.pallete[0];
+    context.fillText("1   " + post.artists[0], 70, 280);
+    context.fillText("2   " + post.artists[1], 70, 355);
+    context.fillText("3   " + post.artists[2], 70, 430);
+    context.fillText("4   " + post.artists[3], 70, 505);
+    context.fillText("5   " + post.artists[4], 70, 580);
 
     let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png", {crossOrigin: "anonymous"});
+    context.drawImage(image, 450, 150, 75, 75);
 
-    image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png"
-    context.drawImage(image, 400, 175, 50, 50);
+    context.beginPath();
+    context.textBaseline = 'middle'
+    context.strokeStyle = "white"
+    context.roundRect(50, 160, 350, 3, 5)
+    context.roundRect(80, 185, 350, 3, 5)
+    context.roundRect(50, 210, 350, 3, 5)
+    context.fillStyle = "white"
+    context.stroke();
+
+    let image2 = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png", {crossOrigin: "anonymous"});
+    context.drawImage(image2, 450, 625, 75, 75);
+
+    context.strokeStyle = "white"
+    context.roundRect(50, 635, 350, 3, 5)
+    context.roundRect(80, 660, 350, 3, 5)
+    context.roundRect(50, 685, 350, 3, 5)
+    context.fillStyle = "white"
+    context.stroke();
+    context.fill();
+
+    context.strokeStyle = post.pallete[0];
+    context.lineWidth = 5;
+    context.roundRect(510, 0, 90, 90, [0, 0, 0, 55])
+    context.stroke()
+
 
     //const buffer = canvas.toBuffer("image/png");
     const buffer1: string = canvas.toDataURL('image/png')
