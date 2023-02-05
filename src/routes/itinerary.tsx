@@ -9,15 +9,18 @@ import Image from "~/components/ImageLoader";
 export default function Itinerary() {
 
     const [searchParams, setSearchParams] = useSearchParams<any>()
+    console.log(`params: ${JSON.stringify({...searchParams})}`)
+    /*
         onMount(() => {
             redirect('http://localhost:3000/info?=' + JSON.stringify(searchParams))
             console.log("hi")
-                })
+              })
+        */
 
     return (
         <main>
             <h1>Have a nice flight!</h1>
-            
+            <a href="/">BACK</a>
             {/* <For each={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')}>{(item, i) => 
                 <p>{item}</p>
             }</For> */}
