@@ -31,13 +31,14 @@ export default function ImageLoader(props: Props) {
         width: 600,
         height: 750,
         pallete: [["#B9D6F2", "#061A40", "#0353A4"], ["#5D576B", "#F7567C", "#99E1D9"], 
-        ["#CCC9DC", "#1B2A41", "#324A5F"], ["#EAF4F4", "#6B9080", "#A4C3B2"]]
+        ["#CCC9DC", "#1B2A41", "#324A5F"], ["#EAF4F4", "#6B9080", "#A4C3B2"],
+        ["#f2b43f", "#363537", "#d62c20"]],
     };
 
     //const query = 'Pink Floyd'
     //console.log(tags)
 
-    let colorway = Math.floor(Math.random() * 4);
+    let colorway = Math.floor(Math.random() * 5);
 
     let artistLocations: string[] = []
     let artistGenres: {count: number, name: string}[] = []
@@ -129,9 +130,12 @@ export default function ImageLoader(props: Props) {
     context.fillStyle = "white";
     context.strokeStyle = post.pallete[colorway][0];
     context.lineWidth = 5;
-    context.roundRect(508, 2, 90, 90, [0, 0, 0, 45])
+    context.roundRect(518, 2, 80, 80, [0, 0, 0, 15])
     context.fill()
     context.stroke()
+
+    let qr = await loadImage("./images/qr-code.png", {crossOrigin: "anonymous"});
+    context.drawImage(qr, 525, 5, 70, 70);
 
 
     //const buffer = canvas.toBuffer("image/png");
