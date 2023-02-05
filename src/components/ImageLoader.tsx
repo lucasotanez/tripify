@@ -19,16 +19,15 @@ export default function ImageLoader(props: Props) {
         artists: props.artists,
         width: 600,
         height: 750,
-        pallete: [["#B9D6F2", "#061A40", "#0353A4"], ["#5D576B", "#F7567C", "#99E1D9"], 
-        ["#CCC9DC", "#1B2A41", "#324A5F"], ["#EAF4F4", "#6B9080", "#A4C3B2"],
-        ["#f2b43f", "#363537", "#d62c20"]],
+        pallete: [["#B9D6F2", "#061A40", "#0353A4"], ["#CCC9DC", "#1B2A41", "#324A5F"], 
+        ["#EAF4F4", "#6B9080", "#A4C3B2"], ["#f2b43f", "#363537", "#d62c20"]],
     };
     // retrieve information about artists
 
     //const query = 'Pink Floyd'
     //console.log(tags)
 
-    let colorway = Math.floor(Math.random() * 5);
+    let colorway = Math.floor(Math.random() * 4);
     let artistLocations: string[] = []
     let artistGenres: {count: number, name: string}[] = []
     for (let i = 0; i < 5; i++) {
