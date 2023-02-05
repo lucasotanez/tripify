@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from "solid-js";
+import { Suspense, onMount, createEffect } from "solid-js";
 import {
   Body,
   ErrorBoundary,
@@ -14,6 +14,7 @@ import {
 import "./root.css";
 
 export default function Root() {
+
   return (
     <Html lang="en">
       <Head>

@@ -10,10 +10,12 @@ export default function ImageLoader(props: Props) {
 
     const [buffer, setBuffer] = createSignal('')
 
-onMount(async () => {
+    
+
+    onMount(async () => {
     const width = 600;
     const height = 750;
-
+    console.log("WORKING")
     let post = {
     tripName: "Music Trip",
     // artists: ["Ice Spice", "Drain Gang", "Drake", "Yeat", "Pink Floyd"],
@@ -44,19 +46,23 @@ onMount(async () => {
     context.fillText("4. " + post.artists[3], 60, 550);
     context.fillText("5. " + post.artists[4], 60, 650);
 
-    let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png");
+    let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png", {crossOrigin: "anonymous"});
+
+    //image.crossOrigin = 'anonymous'
+    image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png"
     context.drawImage(image, 200, 200, 100, 100);
 
     //const buffer = canvas.toBuffer("image/png");
-    const buffer: string = canvas.toDataURL('image/png')
-    setBuffer(buffer)
+    const buffer1: string = canvas.toDataURL('image/png')
+    console.log(buffer1)
+    setBuffer(buffer1)
     //fs.writeFileSync("./src/components/image.png", buffer);
-})
+    })
 
 
 return (
     <div>
-        <img src={`${buffer()}`} />
+        <img src={buffer()} />
     </div>
 )
 }
