@@ -19,9 +19,12 @@ export default function ImageLoader(props: Props) {
         artists: props.artists,
         width: 600,
         height: 750,
-        pallete: ["#B9D6F2", "#061A40", "#0353A4", "#006DAA"],
+        pallete: [["#B9D6F2", "#061A40", "#0353A4"], ["#5D576B", "#F7567C", "#99E1D9"], 
+        ["#CCC9DC", "#1B2A41", "#324A5F"], ["#EAF4F4", "#6B9080", "#A4C3B2"]]
     };
     // retrieve information about artists
+
+    let colorway = Math.floor(Math.random() * 4);
     let artistLocations: string[] = []
     let artistGenres: {count: number, name: string}[] = []
     for (let i = 0; i < 5; i++) {
@@ -41,7 +44,7 @@ export default function ImageLoader(props: Props) {
     const canvas = createCanvas(post.width, post.height);
     const context = canvas.getContext("2d");
 
-    context.fillStyle = post.pallete[2];
+    context.fillStyle = post.pallete[colorway][2];
     context.fillRect(0, 0, width, height);
 
     // Set the style of the test and render it to the canvas
@@ -49,24 +52,24 @@ export default function ImageLoader(props: Props) {
     context.textAlign = "center";
     // 600 is the x value (the center of the image)
     // 170 is the y (the top of the line of text)
-    context.fillStyle = post.pallete[0];
+    context.fillStyle = post.pallete[colorway][0];
     context.fillText(post.tripName, 225, 105);
     context.textAlign = "left";
     context.font = "bold 18pt 'Ubuntu'";
 
     context.beginPath();
-    context.fillStyle = post.pallete[1];
+    context.fillStyle = post.pallete[colorway][1];
     context.roundRect(50, 245, 500, 50, 35)
     context.roundRect(50, 320, 500, 50, 35)
     context.roundRect(50, 395, 500, 50, 35)
     context.roundRect(50, 470, 500, 50, 35)
     context.roundRect(50, 545, 500, 50, 35)
-    context.fillStyle = post.pallete[1];
+    context.fillStyle = post.pallete[colorway][1];
     context.stroke();
     context.fill();
 
     context.beginPath();
-    context.fillStyle = post.pallete[0];
+    context.fillStyle = post.pallete[colorway][0];
     context.fillText("1   " + post.artists[0], 70, 280);
     context.fillText("2   " + post.artists[1], 70, 355);
     context.fillText("3   " + post.artists[2], 70, 430);
@@ -104,9 +107,11 @@ export default function ImageLoader(props: Props) {
     context.stroke();
     context.fill();
 
-    context.strokeStyle = post.pallete[0];
+    context.fillStyle = "white";
+    context.strokeStyle = post.pallete[colorway][0];
     context.lineWidth = 5;
-    context.roundRect(510, 0, 90, 90, [0, 0, 0, 55])
+    context.roundRect(508, 2, 90, 90, [0, 0, 0, 45])
+    context.fill()
     context.stroke()
 
     // get canvas image as base64 string
