@@ -4,7 +4,7 @@
     "dev": "solid-start dev",
     "build": "solid-start build",
     "start": "solid-start start",
-    "draw": "node src/components/image.js"
+    "draw": "node src/components/image.cjs"
   },
   "type": "module",
   "devDependencies": {
