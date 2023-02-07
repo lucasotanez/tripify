@@ -13,7 +13,7 @@
     "paths": {
       "~/*": ["./src/*"]
     },
-    //"build": "rollup -c && tsc -d --emitDeclarationOnly --declarationDir build/types",
+    "build": "rollup -c && tsc -d --emitDeclarationOnly --declarationDir build/types",
     "rootDir": "src"
 
   }
