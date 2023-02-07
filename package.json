@@ -2,7 +2,8 @@
   "name": "tripify",
   "scripts": {
     "dev": "solid-start dev",
-    "build": "solid-start build",
+    "build": "rollup -c",
+    
     "start": "solid-start start"
   },
   "type": "module",
@@ -12,7 +13,9 @@
     "postcss": "^8.4.21",
     "solid-start-node": "^0.2.19",
     "typescript": "^4.9.4",
-    "vite": "^3.2.5"
+    "vite": "^3.2.5",
+    "rollup": "^2.58.0",
+    "rollup-preset-solid": "^1.0.1"
   },
   "dependencies": {
     "@solidjs/meta": "^0.28.2",
