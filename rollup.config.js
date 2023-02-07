@@ -6,5 +6,6 @@ export default {
     dir: 'output',
     format: 'cjs'
   },
-  plugins: [typescript()]
+  plugins: [typescript()],
+  browser: true
 };
