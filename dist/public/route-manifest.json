@@ -1,0 +1,55 @@
+{
+  "/*404": [
+    {
+      "type": "script",
+      "href": "/assets/_...404_.1fed1f6a.js"
+    },
+    {
+      "type": "script",
+      "href": "/assets/entry-client.85b231ad.js"
+    },
+    {
+      "type": "style",
+      "href": "/assets/entry-client.cec77da4.css"
+    }
+  ],
+  "/": [
+    {
+      "type": "script",
+      "href": "/assets/index.fc5ebba5.js"
+    },
+    {
+      "type": "script",
+      "href": "/assets/entry-client.85b231ad.js"
+    },
+    {
+      "type": "style",
+      "href": "/assets/entry-client.cec77da4.css"
+    }
+  ],
+  "/itinerary": [
+    {
+      "type": "script",
+      "href": "/assets/itinerary.3b8fe548.js"
+    },
+    {
+      "type": "script",
+      "href": "/assets/entry-client.85b231ad.js"
+    },
+    {
+      "type": "style",
+      "href": "/assets/entry-client.cec77da4.css"
+    }
+  ],
+  "entry-client": [
+    {
+      "type": "script",
+      "href": "/assets/entry-client.85b231ad.js"
+    },
+    {
+      "type": "style",
+      "href": "/assets/entry-client.cec77da4.css"
+    }
+  ],
+  "index.html": []
+}
