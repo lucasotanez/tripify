@@ -1,6 +1,6 @@
 {
   "src/entry-client.tsx": {
-    "file": "assets/entry-client.85b231ad.js",
+    "file": "assets/entry-client.0f4c36ae.js",
     "src": "src/entry-client.tsx",
     "isEntry": true,
     "dynamicImports": [
@@ -13,7 +13,7 @@
     ]
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_.1fed1f6a.js",
+    "file": "assets/_...404_.0af30333.js",
     "src": "src/routes/[...404].tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -21,7 +21,7 @@
     ]
   },
   "src/routes/index.tsx": {
-    "file": "assets/index.fc5ebba5.js",
+    "file": "assets/index.26a462f5.js",
     "src": "src/routes/index.tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -29,7 +29,7 @@
     ]
   },
   "src/routes/itinerary.tsx": {
-    "file": "assets/itinerary.3b8fe548.js",
+    "file": "assets/itinerary.44e6519a.js",
     "src": "src/routes/itinerary.tsx",
     "isDynamicEntry": true,
     "imports": [
