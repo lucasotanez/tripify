@@ -5,20 +5,24 @@ type Props = {
     artists: string[]
 }
 
+
 export default function ImageLoader(props: Props) {
 
     //const [buffer, setBuffer] = createSignal('')
 
-    onMount(async () => {
-
     const width = 600;
     const height = 750;
+    let canvas: HTMLCanvasElement | undefined;
+
+    onMount(async () => {
+
+
     console.log("WORKING")
     let post = {
         tripName: "Your Concert Tour:",
         artists: props.artists,
-        width: 600,
-        height: 750,
+        width: width,
+        height: height,
         pallete: [["#B9D6F2", "#061A40", "#0353A4"], ["#CCC9DC", "#1B2A41", "#324A5F"], 
         ["#EAF4F4", "#6B9080", "#A4C3B2"], ["#f2b43f", "#363537", "#d62c20"]],
     };
@@ -42,10 +46,10 @@ export default function ImageLoader(props: Props) {
         let tags = res.artists[0].tags || [];
     }
     console.log(artistLocations)
-    console.log(artistGenres)
+    //console.log(artistGenres)
 
     // const canvas = createCanvas(post.width, post.height);
-    const canvas: HTMLCanvasElement | null = document.getElementById('canvas') as HTMLCanvasElement
+    // const canvas: HTMLCanvasElement | null = document.getElementById('canvas') as HTMLCanvasElement;
     const context = canvas?.getContext("2d");
 
     if (!context) return
@@ -135,7 +139,6 @@ export default function ImageLoader(props: Props) {
 
 
 return (
-    <>
-    </>
+    <canvas ref={canvas} width={width} height={height}></canvas>
 )
 }
