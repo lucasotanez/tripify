@@ -1,6 +1,6 @@
 {
   ".solid/index.html": {
-    "file": "assets/index.2ebdd732.js",
+    "file": "assets/index.7dc87861.js",
     "src": ".solid/index.html",
     "isEntry": true,
     "dynamicImports": [
@@ -13,7 +13,7 @@
     ]
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_.9490ca9b.js",
+    "file": "assets/_...404_.ace0659f.js",
     "src": "src/routes/[...404].tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -21,7 +21,7 @@
     ]
   },
   "src/routes/index.tsx": {
-    "file": "assets/index.12f33705.js",
+    "file": "assets/index.5061a779.js",
     "src": "src/routes/index.tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -29,7 +29,7 @@
     ]
   },
   "src/routes/itinerary.tsx": {
-    "file": "assets/itinerary.a1fe97fd.js",
+    "file": "assets/itinerary.32deb286.js",
     "src": "src/routes/itinerary.tsx",
     "isDynamicEntry": true,
     "imports": [
