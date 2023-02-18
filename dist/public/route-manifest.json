@@ -2,54 +2,54 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_.737e7f21.js"
+      "href": "/assets/_...404_.9490ca9b.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.576efffb.js"
+      "href": "/assets/index.2ebdd732.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client.cec77da4.css"
+      "href": "/assets/index.cec77da4.css"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/assets/index.718eb587.js"
+      "href": "/assets/index.12f33705.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.576efffb.js"
+      "href": "/assets/index.2ebdd732.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client.cec77da4.css"
+      "href": "/assets/index.cec77da4.css"
     }
   ],
   "/itinerary": [
     {
       "type": "script",
-      "href": "/assets/itinerary.a76c92ef.js"
+      "href": "/assets/itinerary.a1fe97fd.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.576efffb.js"
+      "href": "/assets/index.2ebdd732.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client.cec77da4.css"
+      "href": "/assets/index.cec77da4.css"
     }
   ],
-  "entry-client": [
+  "entry-client": [],
+  "index.html": [
     {
       "type": "script",
-      "href": "/assets/entry-client.576efffb.js"
+      "href": "/assets/index.2ebdd732.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client.cec77da4.css"
+      "href": "/assets/index.cec77da4.css"
     }
-  ],
-  "index.html": []
+  ]
 }
