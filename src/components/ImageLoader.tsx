@@ -96,8 +96,13 @@ export default function ImageLoader(props: Props) {
 
     // let image = await loadImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png", {crossOrigin: "anonymous"});
     let image = new Image()
+    image.addEventListener(
+        "load",
+        () => {
+            context.drawImage(image, 450, 150, 75, 75);
+        }
+    )
     image.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png"
-    context.drawImage(image, 450, 150, 75, 75);
 
     context.beginPath();
     context.textBaseline = 'middle'
@@ -109,8 +114,13 @@ export default function ImageLoader(props: Props) {
     context.stroke();
 
     let image2 = new Image()
+    image2.addEventListener(
+        "load",
+        () => {
+            context.drawImage(image, 450, 625, 75, 75);
+        }
+    )
     image2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png"
-    context.drawImage(image2, 450, 625, 75, 75);
 
     context.strokeStyle = "white"
     context.roundRect(50, 635, 350, 3, 5)
@@ -128,8 +138,13 @@ export default function ImageLoader(props: Props) {
     context.stroke()
 
     let qr = new Image();
+    qr.addEventListener(
+        "load",
+        () => {
+            context.drawImage(qr, 525, 5, 70, 70);
+        }
+    )
     qr.src = "./images/qr-code.png";
-    context.drawImage(qr, 525, 5, 70, 70);
 
 
     //const buffer = canvas.toBuffer("image/png");

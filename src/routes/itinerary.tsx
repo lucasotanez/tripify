@@ -8,7 +8,6 @@ export default function Itinerary() {
     return (
         <main>
             <h1>Have a nice flight!</h1>
-            <canvas height={600} width={480}></canvas>
             <Image artists={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')} />
         </main>
     )
