@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_.0af30333.js"
+      "href": "/assets/_...404_.737e7f21.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.0f4c36ae.js"
+      "href": "/assets/entry-client.576efffb.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/": [
     {
       "type": "script",
-      "href": "/assets/index.26a462f5.js"
+      "href": "/assets/index.718eb587.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.0f4c36ae.js"
+      "href": "/assets/entry-client.576efffb.js"
     },
     {
       "type": "style",
@@ -30,11 +30,11 @@
   "/itinerary": [
     {
       "type": "script",
-      "href": "/assets/itinerary.44e6519a.js"
+      "href": "/assets/itinerary.a76c92ef.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client.0f4c36ae.js"
+      "href": "/assets/entry-client.576efffb.js"
     },
     {
       "type": "style",
@@ -44,7 +44,7 @@
   "entry-client": [
     {
       "type": "script",
-      "href": "/assets/entry-client.0f4c36ae.js"
+      "href": "/assets/entry-client.576efffb.js"
     },
     {
       "type": "style",
