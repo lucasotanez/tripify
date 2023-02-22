@@ -33,7 +33,7 @@ export default function ImageLoader(props: Props) {
 
     let colorway = Math.floor(Math.random() * 4);
     let artistLocations: string[] = []
-    let artistGenres: {count: number, name: string}[] = []
+    //let artistGenres: {count: number, name: string}[] = []
     for (let i = 0; i < 5; i++) {
         let query = post.artists[i]
         let artist = await fetch(`https://musicbrainz.org/ws/2/artist/?query=${query}`, {
