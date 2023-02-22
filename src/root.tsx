@@ -13,6 +13,10 @@ import {
 } from "solid-start";
 import "./root.css";
 
+fetch('https://api.ipify.org/?format=json')
+  .then(results => results.json())
+  .then(console.log)
+
 export default function Root() {
 
   return (
