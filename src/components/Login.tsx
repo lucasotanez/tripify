@@ -2,9 +2,12 @@ let ip = await fetch('https://api.ipify.org/?format=json')
   .then(results => results.json())
 //console.log(ip)
 
-fetch('https://tripify-backend.onrender.com' || 8888, {
+fetch('https://tripify-backend.onrender.com/getip', {
     method: "POST",
     body: ip,
+    headers:{
+        'Content-Type': 'application/json'
+    }
 })
 
 export default function Login() {
