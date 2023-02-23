@@ -122,6 +122,15 @@ export default function ImageLoader(props: Props) {
     )
     image2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/White_plane_icon_2.png/600px-White_plane_icon_2.png"
 
+    let spotLogo = new Image()
+    spotLogo.addEventListener(
+        "load",
+        () => {
+            context.drawImage(image, 535, 100, 30, 20);
+        }
+    )
+    spotLogo.src = "./images/spotifylogo.webp"
+
     context.strokeStyle = "white"
     context.roundRect(50, 635, 350, 3, 5)
     context.roundRect(80, 660, 350, 3, 5)
