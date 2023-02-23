@@ -7,7 +7,7 @@ export default function Itinerary() {
 
     return (
         <main>
-            <h1>Have a nice flight!</h1>
+            {/* <h1 margin-top="200px">Have a nice flight!</h1> */}
             <Image artists={JSON.parse(JSON.stringify({...searchParams}.info)).slice(2, -2).split('","')} />
         </main>
     )
