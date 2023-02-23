@@ -2,54 +2,54 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_.ace0659f.js"
+      "href": "/assets/_...404_.1bc90927.js"
     },
     {
       "type": "script",
-      "href": "/assets/index.7dc87861.js"
+      "href": "/assets/index.f2973f17.js"
     },
     {
       "type": "style",
-      "href": "/assets/index.cec77da4.css"
+      "href": "/assets/index.d17a6fab.css"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/assets/index.5061a779.js"
+      "href": "/assets/index.cddf0bfb.js"
     },
     {
       "type": "script",
-      "href": "/assets/index.7dc87861.js"
+      "href": "/assets/index.f2973f17.js"
     },
     {
       "type": "style",
-      "href": "/assets/index.cec77da4.css"
+      "href": "/assets/index.d17a6fab.css"
     }
   ],
   "/itinerary": [
     {
       "type": "script",
-      "href": "/assets/itinerary.32deb286.js"
+      "href": "/assets/itinerary.ae189bd2.js"
     },
     {
       "type": "script",
-      "href": "/assets/index.7dc87861.js"
+      "href": "/assets/index.f2973f17.js"
     },
     {
       "type": "style",
-      "href": "/assets/index.cec77da4.css"
+      "href": "/assets/index.d17a6fab.css"
     }
   ],
   "entry-client": [],
   "index.html": [
     {
       "type": "script",
-      "href": "/assets/index.7dc87861.js"
+      "href": "/assets/index.f2973f17.js"
     },
     {
       "type": "style",
-      "href": "/assets/index.cec77da4.css"
+      "href": "/assets/index.d17a6fab.css"
     }
   ]
 }

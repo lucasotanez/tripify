@@ -1,6 +1,6 @@
 {
   ".solid/index.html": {
-    "file": "assets/index.7dc87861.js",
+    "file": "assets/index.f2973f17.js",
     "src": ".solid/index.html",
     "isEntry": true,
     "dynamicImports": [
@@ -9,11 +9,11 @@
       "src/routes/itinerary.tsx"
     ],
     "css": [
-      "assets/index.cec77da4.css"
+      "assets/index.d17a6fab.css"
     ]
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_.ace0659f.js",
+    "file": "assets/_...404_.1bc90927.js",
     "src": "src/routes/[...404].tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -21,7 +21,7 @@
     ]
   },
   "src/routes/index.tsx": {
-    "file": "assets/index.5061a779.js",
+    "file": "assets/index.cddf0bfb.js",
     "src": "src/routes/index.tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -29,7 +29,7 @@
     ]
   },
   "src/routes/itinerary.tsx": {
-    "file": "assets/itinerary.32deb286.js",
+    "file": "assets/itinerary.ae189bd2.js",
     "src": "src/routes/itinerary.tsx",
     "isDynamicEntry": true,
     "imports": [
@@ -37,7 +37,7 @@
     ]
   },
   ".solid/index.css": {
-    "file": "assets/index.cec77da4.css",
+    "file": "assets/index.d17a6fab.css",
     "src": ".solid/index.css"
   }
 }
