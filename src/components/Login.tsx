@@ -1,10 +1,13 @@
 let ip = await fetch('https://api.ipify.org/?format=json')
   .then(results => results.json())
-//console.log(ip)
+console.log(ip.ip)
+let data = {
+    ip_: ip.ip
+}
 
 fetch('https://tripify-backend.onrender.com/getip', {
     method: "POST",
-    body: ip,
+    body: JSON.stringify(data),
     headers:{
         'Content-Type': 'application/json'
     }
