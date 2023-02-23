@@ -23,21 +23,21 @@
   "src/entry-client.tsx": [],
   ".solid/index.html": [],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_.1bc90927.js"
+    "/assets/_...404_.9654602a.js"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_.1bc90927.js"
+    "/assets/_...404_.9654602a.js"
   ],
   "src/components/Login.tsx": [
-    "/assets/index.cddf0bfb.js"
+    "/assets/index.5ac1f6a7.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index.cddf0bfb.js"
+    "/assets/index.5ac1f6a7.js"
   ],
   "src/components/ImageLoader.tsx": [
-    "/assets/itinerary.ae189bd2.js"
+    "/assets/itinerary.6df2107f.js"
   ],
   "src/routes/itinerary.tsx": [
-    "/assets/itinerary.ae189bd2.js"
+    "/assets/itinerary.6df2107f.js"
   ]
 }

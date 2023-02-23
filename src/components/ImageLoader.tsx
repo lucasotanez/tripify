@@ -150,7 +150,7 @@ export default function ImageLoader(props: Props) {
     spotLogo.addEventListener(
         "load",
         () => {
-            context.drawImage(spotLogo, 335, 100, 70, 70);
+            context.drawImage(spotLogo, 535, 95, 60, 30);
         }
     )
     spotLogo.src = "./images/spotifylogo.png";
