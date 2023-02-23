@@ -129,7 +129,7 @@ export default function ImageLoader(props: Props) {
             context.drawImage(image, 535, 100, 30, 20);
         }
     )
-    spotLogo.src = "./images/spotifylogo.webp"
+    spotLogo.src = "./images/spotifylogo.png"
 
     context.strokeStyle = "white"
     context.roundRect(50, 635, 350, 3, 5)
